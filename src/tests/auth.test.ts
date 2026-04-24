@@ -19,7 +19,9 @@ describe("getAPIKey", () => {
   });
 
   test("returns the API key when header is valid", () => {
-    expect(getAPIKey({ authorization: "ApiKey my-secret-key" })).toBe("my-secret-key");
+    expect(getAPIKey({ authorization: "ApiKey my-secret-key" })).toBe(
+      "my-secret-key",
+    );
   });
 
   test("scheme matching is case-sensitive", () => {
